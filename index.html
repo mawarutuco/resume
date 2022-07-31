@@ -11,6 +11,10 @@
       margin: 0px;
     }
 
+    .white {
+      background-color: white;
+    }
+
     .purple {
       background-color: #b5becb;
     }
@@ -29,13 +33,11 @@
 
     .flex-row {
       display: flex;
-      height: 100%;
     }
 
     .flex-col {
       display: flex;
       flex-direction: column;
-      height: 100%;
     }
 
     .profile-photo {
@@ -44,12 +46,15 @@
       height: 150px;
       object-fit: cover;
       border-radius: 50%;
+      margin: 5px;
     }
 
-    .nav {
-      height: auto;
-      display: flex;
-      align-items: center;
+    .sticky {
+      position: sticky;
+    }
+
+    .relative {
+      position: relative;
     }
 
     .width90 {
@@ -60,13 +65,17 @@
       width: 10%;
     }
 
-    .middle {
+    .justify-content-center {
       justify-content: center;
+    }
+
+    .align-items-center {
       align-items: center;
     }
 
     .footer {
       position: fixed;
+      justify-content: space-around;
       bottom: 0;
       width: 100%;
     }
@@ -74,12 +83,17 @@
   <body class="purple">
     <div class="flex-col container">
       <header class="flex-row">
-        <h1>廖于萱</h1>
-        <img class="profile-photo" src="./resumeImg.jpg" alt="" />
-        <div>一點點自我介紹</div>
+        <div class="flex-col align-items-center">
+          <h1>廖于萱</h1>
+          <img class="profile-photo" src="./resumeImg.jpg" alt="" />
+        </div>
+        <div class="flex-col">
+          <a href="">gitHub</a>
+          <div>一點點自我介紹</div>
+        </div>
       </header>
-      <div class="flex-row ">
-        <aside class="flex-col nav width10">
+      <div class="flex-row relative">
+        <aside class="flex-col align-items-center width10">
           <a href="">學歷</a>
           <a href="">學歷</a>
           <a href="">學歷</a>
@@ -103,9 +117,13 @@
         </article>
       </div>
     </div>
-    <footer class="footer middle yellow">
-      <div>連絡信箱</div>
-      <div>連絡電話</div>
+    <footer
+      class="flex-row footer justify-content-center align-items-center yellow"
+    >
+      <div>連絡信箱：xul4841268@gmail.com</div>
+      <div>連絡電話：0928442263</div>
     </footer>
   </body>
+
+  <script></script>
 </html>
