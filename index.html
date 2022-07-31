@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>廖于萱</title>
-</head>
-<body>
-    <h1>TEST</h1>
-</body>
+  </head>
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    .purple {
+      background-color: #b5becb;
+    }
+
+    .yellow {
+      background-color: #fef2be;
+    }
+
+    .container {
+      margin: 8%;
+    }
+
+    * {
+      border: 1px solid black;
+    }
+
+    .flex-row {
+      display: flex;
+      height: 100%;
+    }
+
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .profile-photo {
+      width: 150px;
+      min-width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .nav {
+      height: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .width90 {
+      width: 90%;
+    }
+
+    .width10 {
+      width: 10%;
+    }
+
+    .middle {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <body class="purple">
+    <div class="flex-col container">
+      <header class="flex-row">
+        <h1>廖于萱</h1>
+        <img class="profile-photo" src="./resumeImg.jpg" alt="" />
+        <div>一點點自我介紹</div>
+      </header>
+      <div class="flex-row ">
+        <aside class="flex-col nav width10">
+          <a href="">學歷</a>
+          <a href="">學歷</a>
+          <a href="">學歷</a>
+        </aside>
+        <article class="flex-col width90">
+          <h3>專長</h3>
+          <h4>前端</h4>
+          <span>內文.....</span>
+          <h3>專長</h3>
+          <h4>前端</h4>
+          <span>內文.....</span>
+          <h3>專長</h3>
+          <h4>前端</h4>
+          <span>內文.....</span>
+          <h3>專長</h3>
+          <h4>前端</h4>
+          <span>內文.....</span>
+          <h3>專長</h3>
+          <h4>前端</h4>
+          <span>內文.....</span>
+        </article>
+      </div>
+    </div>
+    <footer class="footer middle yellow">
+      <div>連絡信箱</div>
+      <div>連絡電話</div>
+    </footer>
+  </body>
 </html>
