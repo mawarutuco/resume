@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>廖于萱</title>
@@ -11,62 +12,96 @@
       margin: 0px;
     }
 
-    .white {
-      background-color: white;
+    .primary {
+      background-color: #f5f0bb;
     }
 
-    .purple {
-      background-color: #b5becb;
+    .secondary {
+      background-color: #c4dfaa;
     }
 
-    .yellow {
-      background-color: #fef2be;
+    .third-color {
+      background-color: #90c8ac;
+    }
+
+    .fourth-color {
+      background-color: #73a9ad;
     }
 
     .container {
-      margin: 8%;
+      margin: 5%;
     }
 
-    * {
-      border: 1px solid black;
+    .border {
+      border: 5px solid #c4dfaa;
+      border-radius: 10px;
     }
 
-    .flex-row {
+    .row {
       display: flex;
     }
 
-    .flex-col {
+    .md-row {
       display: flex;
       flex-direction: column;
     }
 
+    .col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+    }
+
+    .md-col {
+      display: flex;
+    }
+
+    .m-10 {
+      margin: 10px;
+    }
+
+    .sm-mt-10 {
+      margin-top: 10px;
+    }
+
+    .m-20 {
+      margin: 20px;
+    }
+
+    .p-10 {
+      padding: 10px;
+    }
+
+    .p-20 {
+      padding: 20px;
+    }
+
     .profile-photo {
-      width: 150px;
-      min-width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       object-fit: cover;
+      border: 5px solid #c4dfaa;
       border-radius: 50%;
-      margin: 5px;
     }
 
     .sticky {
       position: sticky;
+      top: 10px;
     }
 
     .relative {
       position: relative;
     }
 
-    .width90 {
-      width: 90%;
-    }
-
-    .width10 {
-      width: 10%;
-    }
-
     .justify-content-center {
       justify-content: center;
+    }
+
+    .justify-content-around {
+      justify-content: space-around;
     }
 
     .align-items-center {
@@ -75,53 +110,190 @@
 
     .footer {
       position: fixed;
-      justify-content: space-around;
       bottom: 0;
       width: 100%;
     }
+
+    .width100 {
+      width: 100%;
+    }
+
+    .width85 {
+      width: 85%;
+    }
+
+    .width15 {
+      width: 15%;
+    }
+
+    .sm-hide {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: bolder;
+    }
+
+    @media screen and (min-width: 720px) {
+      .md-row {
+        flex-direction: row;
+      }
+
+      .md-col {
+        flex-direction: column;
+      }
+
+      .md-justify-content-start {
+        justify-content: flex-start;
+      }
+
+      .width80 {
+        width: 80%;
+      }
+
+      .width20 {
+        width: 20%;
+      }
+
+      .sm-mt-10 {
+        margin-top: 0px;
+      }
+
+      .md-ml-10 {
+        margin-left: 10px;
+      }
+    }
+
+    @media screen and (min-width: 540px) {
+      .sm-hide {
+        display: block;
+      }
+    }
+
+    .hover-text {
+      --h: 1.2em;
+      line-height: var(--h);
+      color: #0000;
+      text-shadow: 0 calc(-1 * var(--_t, 0em)) #194221,
+        0 calc(var(--h) - var(--_t, 0em)) #194221;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .hover-text:hover {
+      --_t: var(--h);
+    }
+
+    .move-up {
+      animation: moveUp 1s;
+    }
+
+    @keyframes moveUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
   </style>
-  <body class="purple">
-    <div class="flex-col container">
-      <header class="flex-row">
-        <div class="flex-col align-items-center">
-          <h1>廖于萱</h1>
-          <img class="profile-photo" src="./resumeImg.jpg" alt="" />
+  <body class="primary">
+    <div class="col md-row container">
+      <header class="col md-col width20">
+        <div class="col align-items-center border">
+          <h2>于萱</h2>
+          <img class="profile-photo m-20" src="./resumeImg.jpg" alt="頭像" />
         </div>
-        <div class="flex-col">
-          <a href="">gitHub</a>
-          <div>一點點自我介紹</div>
+        <div class="col">
+          <div class="row wrap m-10 justify-content-around">
+            <a
+              class="hover-text m-10"
+              target="blank"
+              href="https://github.com/mawarutuco"
+              >GitHub</a
+            >
+            <a
+              class="hover-text m-10"
+              target="blank"
+              href="https://codepen.io/mawarutuco"
+              >codepen</a
+            >
+          </div>
+          <div class="row justify-content-center wrap">
+            <h4 class="border m-10">樂於學習</h4>
+            <h4 class="border m-10">責任心重</h4>
+            <h4 class="border m-10">勇於嘗試</h4>
+            <h4 class="border m-10 sm-hide">喜歡解謎</h4>
+          </div>
+        </div>
+
+        <div
+          class="border p-10 wrap md-col align-items-center justify-content-center md-justify-content-start sticky secondary"
+        >
+          <a class="hover-text m-10" href="expertise">專長</a>
+          <a class="hover-text m-10" href="">專案成就</a>
+          <a class="hover-text m-10" href="">工作經歷</a>
+          <a class="hover-text m-10" href="">求職條件</a>
+          <a class="hover-text m-10" href="">學歷</a>
+          <a class="hover-text m-10" href="">自傳</a>
         </div>
       </header>
-      <div class="flex-row relative">
-        <aside class="flex-col align-items-center width10">
-          <a href="">學歷</a>
-          <a href="">學歷</a>
-          <a href="">學歷</a>
-        </aside>
-        <article class="flex-col width90">
-          <h3>專長</h3>
-          <h4>前端</h4>
-          <span>內文.....</span>
-          <h3>專長</h3>
-          <h4>前端</h4>
-          <span>內文.....</span>
-          <h3>專長</h3>
-          <h4>前端</h4>
-          <span>內文.....</span>
-          <h3>專長</h3>
-          <h4>前端</h4>
-          <span>內文.....</span>
-          <h3>專長</h3>
-          <h4>前端</h4>
-          <span>內文.....</span>
-        </article>
-      </div>
+
+      <article class="border md-ml-10 p-10 col width80 sm-mt-10">
+        <div id="expertise">
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+        <div>
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+        <div>
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+        <div>
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+        <div>
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+        <div>
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+        <div>
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+        <div>
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+        <div>
+          <h2>專長</h2>
+          <h4>內文</h4>
+          <span>內文...</span>
+        </div>
+      </article>
     </div>
-    <footer
-      class="flex-row footer justify-content-center align-items-center yellow"
-    >
-      <div>連絡信箱：xul4841268@gmail.com</div>
-      <div>連絡電話：0928442263</div>
+    <footer class="row footer third-color justify-content-around secondary">
+      <spans>連絡信箱：xul4841268@gmail.com</spans>
+      <spans>連絡電話：0928442263</spans>
     </footer>
   </body>
 
