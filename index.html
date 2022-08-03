@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="./font-awesome-4.7.0/css/font-awesome.min.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -32,9 +36,15 @@
       margin: 5%;
     }
 
-    .border {
+    .border-primary {
       border: 5px solid #c4dfaa;
       border-radius: 10px;
+    }
+
+    .border-left {
+      border-style: solid;
+      border-color: #90c8ac;
+      border-width: 0 0 0 5px;
     }
 
     .row {
@@ -176,7 +186,7 @@
       line-height: var(--h);
       color: #0000;
       text-shadow: 0 calc(-1 * var(--_t, 0em)) #194221,
-        0 calc(var(--h) - var(--_t, 0em)) #194221;
+        0 calc(var(--h) - var(--_t, 0em)) #73a9ad;
       overflow: hidden;
       transition: 0.3s;
     }
@@ -203,37 +213,42 @@
   </style>
   <body class="primary">
     <div class="col md-row container">
-      <header class="col md-col width20">
-        <div class="col align-items-center border">
+      <header class="col width20">
+        <!-- 頭像start -->
+        <div class="col align-items-center border-primary">
           <h2>于萱</h2>
           <img class="profile-photo m-20" src="./resumeImg.jpg" alt="頭像" />
-        </div>
-        <div class="col">
           <div class="row wrap m-10 justify-content-around">
             <a
               class="hover-text m-10"
               target="blank"
               href="https://github.com/mawarutuco"
-              >GitHub</a
             >
+              <i class="fa fa-github" aria-hidden="true"></i> GitHub
+            </a>
+
             <a
               class="hover-text m-10"
               target="blank"
               href="https://codepen.io/mawarutuco"
-              >codepen</a
-            >
-          </div>
-          <div class="row justify-content-center wrap">
-            <h4 class="border m-10">樂於學習</h4>
-            <h4 class="border m-10">責任心重</h4>
-            <h4 class="border m-10">勇於嘗試</h4>
-            <h4 class="border m-10 sm-hide">喜歡解謎</h4>
+              ><i class="fa fa-codepen" aria-hidden="true"></i> codepen
+            </a>
           </div>
         </div>
-
-        <!-- 導覽 -->
+        <!-- 頭像end -->
+        <!-- 標籤start -->
+        <div class="col">
+          <div class="row justify-content-center wrap">
+            <h4 class="border-primary m-10">樂於學習</h4>
+            <h4 class="border-primary m-10">責任心重</h4>
+            <h4 class="border-primary m-10">勇於嘗試</h4>
+            <h4 class="border-primary m-10 sm-hide">喜歡解謎</h4>
+          </div>
+        </div>
+        <!-- 標籤end -->
+        <!-- 導覽start -->
         <div
-          class="border p-10 wrap md-col align-items-center justify-content-center md-justify-content-start sticky secondary"
+          class="border-primary p-10 wrap md-col align-items-center justify-content-center md-justify-content-start sticky secondary"
         >
           <a class="hover-text m-10" href="#expertise">專長</a>
           <a class="hover-text m-10" href="#project">專案成就</a>
@@ -241,9 +256,10 @@
           <a class="hover-text m-10" href="#education">學歷</a>
           <a class="hover-text m-10" href="#autobiography">自傳</a>
         </div>
+        <!-- 導覽end -->
       </header>
 
-      <article class="border md-ml-10 p-10 col width80 sm-mt-10">
+      <article class="border-primary md-ml-10 p-10 col width80 sm-mt-10">
         <div id="expertise">
           <h2>專長</h2>
           <h4>前端技能樹</h4>
@@ -258,33 +274,148 @@
               (LIOJ)練習題目
             </li>
             <li>jQuery 會運用及理解基本規則</li>
-            <li>對ES6 會基本操作 (EX: Arrow Funtion、模組系統、解構賦值等)</li>
-            <li>HTML5, CSS3 能運用並製作出網站，習慣使用flex切版</li>
             <li>Bootstrap4 會套用及理解基本規則</li>
             <li>Scss 會基本操作</li>
             <li>會使用RWD響應式技術</li>
             <li>NodeJS 能安裝解除套件、專案初始化、建立刪除目錄等操作</li>
           </ul>
+          <h4>鼎新ERP系統</h4>
+          <ul>
+            <li>熟悉且懂得操作系統</li>
+            <li>使用過 WFERP、SmartERP、CosMosERP系統</li>
+            <li>使用過 財務、生管、配銷、電子發票等模組</li>
+            <li>能夠自行排除ERP初步及環境問題</li>
+          </ul>
+          <h4>其他工具</h4>
+          <ul>
+            <li>辦公工具：Word、Excel、PowerPoint 熟悉/li></li>
+            <li>介面設計：Figma 會使用基本功能/li></li>
+          </ul>
         </div>
 
         <div id="project">
           <h2>專案成就</h2>
-          
         </div>
         <div id="work_experience">
           <h2>工作經歷</h2>
+          <ul>
+            <p>前端工程師養成班</p>
+            <p>資展國際股份有限公司/電腦軟體服務業</p>
+            <p>軟體設計工程師 台中市南屯區</p>
+            <p>2022/3~2022/7</p>
+            <p>5個月</p>
+            <p>參與資展協會「前端工程師養成班」擔任學員職位</p>
+
+            <p>※ 小專題 - 獨自開發</p>
+            <p>專案名稱：日文學習網站</p>
+            <p>專案內容：希望能夠提供日文初學者一個學習日文的網站</p>
+            <p>使用技術：JavaScript、jQuery、SCSS、Bootstrap、HTML</p>
+            <p>
+              網站架構：日文五十音測驗（專案成就區有附上連結）、輪播結合圖文介紹助詞、日文句子測驗等
+            </p>
+
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            - - - - - - - - - - - -
+
+            <p>※ 大專題 - 6人團隊開發</p>
+            <p>專案名稱：ToDo Monster 待辦獸</p>
+            <p>
+              專案內容：結合「To-do
+              List」和「寵物養成」的網頁應用，在資訊爆炸的時代我們希望將生活中的任務拆分，讓大腦覺得完成任務的過程不再枯燥，漸漸培養好習慣
+            </p>
+            <p>（專案成就區有附上連結）</p>
+
+            <p>使用技術：</p>
+            <li>
+              SPA 響應式網頁，採用 React框架 + Express 前後端分離的開發模式
+            </li>
+            <li>React Router 路由設定</li>
+            <li>React-i18next 做多語系切換</li>
+            <li>React-Bootstrap切版美化</li>
+            <li>pixijs 讓待辦獸做換裝&切換動作</li>
+            <li>axios 與後端 Web API 介接</li>
+
+            <p>網站架構：</p>
+            <li>
+              專案：快速建立專案，配合巢狀ToDoList，幫助細拆分待處理事項。也可公開專案，於瀏覽頁面給其他使用者參考
+            </li>
+            <li>
+              瀏覽：參考其他使用者的文章，也可收藏文章，可拍手鼓勵作者，互相勉勵成長
+            </li>
+            <li>任務：完成不同的任務獲得金幣獎勵</li>
+            <li>商城：為自己的待辦獸購買可愛配件（耳朵、尾巴、眼睛等）</li>
+            <li>背包：為自己的待辦獸配置配件，重新命名等</li>
+            <li>設定：可切換語言</li>
+
+            <p>團隊中工作分配：</p>
+            <li>操作React Router</li>
+            <li>架設多國語系i18n</li>
+            <li>
+              React功能整合
+              <ul>
+                <li>專案、巢狀ToDoList</li>
+                <li>商城（商店、購物車）</li>
+                <li>瀏覽文章</li>
+                <li>登入註冊</li>
+                <li>任務</li>
+              </ul>
+            </li>
+
+            <p>資訊人員</p>
+            <p>
+              漢坤國際醫藥股份有限公司 藥品／化妝品及清潔用品批發業 100~500人
+            </p>
+            <p>系統維護／操作人員 台中市中區</p>
+            <p>2021/9~2022/2</p>
+            <p>6個月</p>
+            <li>補齊內部ERP十多家公司別從2020開始缺少之資料</li>
+            <li>回報先前人員作業弊端</li>
+            <li>教主管人員系統之操作</li>
+            <li>排除ERP系統異常錯誤</li>
+            <li>協助系統整合</li>
+            <li>製作簡報</li>
+
+            <p>服務顧問師</p>
+            <p>鼎新電腦股份有限公司 電腦軟體服務業 500人以上</p>
+            <p>電話客服類人員 台中市大里區</p>
+            <p>2020/7~2021/6</p>
+            <p>1年</p>
+            <li>日均接聽18.4、客戶滿意度9.2、滿意度占比96.4%，考核評等B</li>
+            <li>線上提供電話或文字服務</li>
+            <li>即時解決系統問題</li>
+            <li>協助排除系統錯誤</li>
+            <li>教導客戶系統操作</li>
+            <li>內部提出改善建議</li>
+
+            <p>國遠距教學學伴</p>
+            <p>國立勤益科技大學 大專校院教育事業 30~100人</p>
+            <p>助教 台中市太平區</p>
+            <p>2018/6~2019/6</p>
+            <p>1年1個月</p>
+            <li>傳授課程</li>
+            <li>輔導學生</li>
+            <li>批改作業</li>
+          </ul>
         </div>
         <div id="education">
           <h2>學歷</h2>
+          <div class="row">
+            <div class=""></div>
+            <ul>
+              <li>國立勤益科技大學 資訊管理學系 大學畢業 2017/9~2021/6</li>
+              <li>新民高中 資料處理科 高職畢業 2014/9~2017/6</li>
+            </ul>
+          </div>
         </div>
         <div id="autobiography">
           <h2>自傳</h2>
         </div>
       </article>
     </div>
+
     <footer class="row footer third-color justify-content-around secondary">
-      <spans>連絡信箱：xul4841268@gmail.com</spans>
-      <spans>連絡電話：0928442263</spans>
+      <i class="fa fa-envelope-o" aria-hidden="true"> xul4841268@gmail.com</i>
+      <i class="fa fa-phone" aria-hidden="true"> 0928442263</i>
     </footer>
   </body>
 
