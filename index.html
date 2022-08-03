@@ -145,6 +145,14 @@
       font-weight: bolder;
     }
 
+    hr{
+      width: 80%;
+      border-style: dotted ;
+      border-color: #90c8ac;
+      border-width: 10px 0 0 0;
+      padding: 10px;
+    }
+
     @media screen and (min-width: 720px) {
       .md-row {
         flex-direction: row;
@@ -211,12 +219,12 @@
       }
     }
   </style>
-  <body class="primary">
+  <body class="primary ">
     <div class="col md-row container">
       <header class="col width20">
         <!-- 頭像start -->
         <div class="col align-items-center border-primary">
-          <h2>于萱</h2>
+          <h1>于萱</h1>
           <img class="profile-photo m-20" src="./resumeImg.jpg" alt="頭像" />
           <div class="row wrap m-10 justify-content-around">
             <a
@@ -259,10 +267,10 @@
         <!-- 導覽end -->
       </header>
 
-      <article class="border-primary md-ml-10 p-10 col width80 sm-mt-10">
+      <article class="border-primary md-ml-10 p-20 col width80 sm-mt-10">
         <div id="expertise">
-          <h2>專長</h2>
-          <h4>前端技能樹</h4>
+          <h1>專長</h1>
+          <h3>前端技能樹</h3>
           <ul>
             <li>
               ReactJS框架 懂得基本Hook，會基本操作，能做出簡易網站 <br />
@@ -279,28 +287,31 @@
             <li>會使用RWD響應式技術</li>
             <li>NodeJS 能安裝解除套件、專案初始化、建立刪除目錄等操作</li>
           </ul>
-          <h4>鼎新ERP系統</h4>
+          <h3>鼎新ERP系統</h3>
           <ul>
             <li>熟悉且懂得操作系統</li>
             <li>使用過 WFERP、SmartERP、CosMosERP系統</li>
             <li>使用過 財務、生管、配銷、電子發票等模組</li>
             <li>能夠自行排除ERP初步及環境問題</li>
           </ul>
-          <h4>其他工具</h4>
+          <h3>其他工具</h3>
           <ul>
-            <li>辦公工具：Word、Excel、PowerPoint 熟悉/li></li>
-            <li>介面設計：Figma 會使用基本功能/li></li>
+            <li>辦公工具：Word、Excel、PowerPoint 熟悉</li>
+            <li>介面設計：Figma 會使用基本功能</li>
           </ul>
         </div>
 
         <div id="project">
-          <h2>專案成就</h2>
+          <h1>專案成就</h1>
         </div>
+
+        <hr>
+        
         <div id="work_experience">
-          <h2>工作經歷</h2>
+          <h1>工作經歷</h1>
           <ul>
-            <p>前端工程師養成班</p>
-            <p>資展國際股份有限公司/電腦軟體服務業</p>
+            <h3>前端工程師養成班</h3>
+            <h3>資展國際股份有限公司/電腦軟體服務業</h3>
             <p>軟體設計工程師 台中市南屯區</p>
             <p>2022/3~2022/7</p>
             <p>5個月</p>
@@ -361,10 +372,10 @@
               </ul>
             </li>
 
-            <p>資訊人員</p>
-            <p>
+            <h3>資訊人員</h3>
+            <h3>
               漢坤國際醫藥股份有限公司 藥品／化妝品及清潔用品批發業 100~500人
-            </p>
+            </h3>
             <p>系統維護／操作人員 台中市中區</p>
             <p>2021/9~2022/2</p>
             <p>6個月</p>
@@ -375,8 +386,8 @@
             <li>協助系統整合</li>
             <li>製作簡報</li>
 
-            <p>服務顧問師</p>
-            <p>鼎新電腦股份有限公司 電腦軟體服務業 500人以上</p>
+            <h3>服務顧問師</h3>
+            <h3>鼎新電腦股份有限公司 電腦軟體服務業 500人以上</h3>
             <p>電話客服類人員 台中市大里區</p>
             <p>2020/7~2021/6</p>
             <p>1年</p>
@@ -387,33 +398,53 @@
             <li>教導客戶系統操作</li>
             <li>內部提出改善建議</li>
 
-            <p>國遠距教學學伴</p>
-            <p>國立勤益科技大學 大專校院教育事業 30~100人</p>
-            <p>助教 台中市太平區</p>
-            <p>2018/6~2019/6</p>
-            <p>1年1個月</p>
+            <h2>國遠距教學學伴</h2>
+            <h3>國立勤益科技大學 大專校院教育事業 30~100人</h3>
+            <p>2018/6~2019/6（1年1個月）</p>
             <li>傳授課程</li>
             <li>輔導學生</li>
             <li>批改作業</li>
           </ul>
         </div>
+
+        <hr>
+        
         <div id="education">
-          <h2>學歷</h2>
+          <h1>學歷</h1>
           <div class="row">
             <div class=""></div>
             <ul>
-              <li>國立勤益科技大學 資訊管理學系 大學畢業 2017/9~2021/6</li>
-              <li>新民高中 資料處理科 高職畢業 2014/9~2017/6</li>
+              <li>國立勤益科技大學 （資訊管理學系） 大學畢業 2017/9~2021/6</li>
+              <li>新民高中 （資料處理科） 高職畢業 2014/9~2017/6</li>
             </ul>
           </div>
         </div>
+
+        <hr>
+        
         <div id="autobiography">
-          <h2>自傳</h2>
+          <h1>自傳</h1>
+          <ul>
+            <h3>個人特質</h3>
+            <li>解決問題：</li>
+            <p>從小喜歡玩線上各式解謎遊戲，長大後在家中協助解決問題，再經過實習直接對應客戶的各種疑難雜症後，更善於將繁雜的問題抽絲剝解，處理妥當。</p>
+            參加資展會 -
+            前端工程師養成班中，不論製作大小專題或個人練習時，不斷面臨一個又一個問題，能夠有條理得將問題一一解決。</p>
+            <li>勇於嘗試：</li>
+            <p> 喜歡日本文化而從零自學日文到N2（日文等級
+            低N5→N1高），大學曾參與學校活動帶來自大阪、九州的日本學生。</p>
+           <p> 積極爭取到在鼎新電腦實習機會，除了每天操作ERP協助排除各個客戶的問題，也參與主管分配的團隊任務，大大提升我ERP技術、抗壓、溝通及團隊合作。</p>
+           <li>責任心重、要求嚴格：</li>
+           <p> 高中時期要求自己成績能更好，當課程中有不懂的地方，休息時間會請教老師，並不放棄的繼續學習。</p>
+           <p> 大學實習期間白天上班操作系統，若遇到不懂的地方虛心請教前輩，晚上回家繼續練習並做筆記。</p>
+           <p> 在前端工程師養成班中，白天聽課，晚上也不忘複習練習，不斷嘗試新事物，做出更多作品。</p>
+          </p>
+        </ul>
         </div>
       </article>
     </div>
 
-    <footer class="row footer third-color justify-content-around secondary">
+    <footer class="row footer third-color justify-content-around secondary p-10">
       <i class="fa fa-envelope-o" aria-hidden="true"> xul4841268@gmail.com</i>
       <i class="fa fa-phone" aria-hidden="true"> 0928442263</i>
     </footer>
