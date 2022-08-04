@@ -5,6 +5,7 @@
       rel="stylesheet"
       href="./font-awesome-4.7.0/css/font-awesome.min.css"
     />
+    <link rel="icon" href="./img/sushi_salmon.png" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,38 +13,45 @@
     <title>廖于萱</title>
   </head>
   <style>
+    :root {
+      --primary: #f5f0bb;
+      --secondary: #c4dfaa;
+      --third-color: #90c8ac;
+      --fourth-color: #73a9ad;
+    }
+
     body {
       margin: 0px;
     }
 
-    .primary {
-      background-color: #f5f0bb;
+    .bg-primary {
+      background-color: var(--primary);
     }
 
-    .secondary {
-      background-color: #c4dfaa;
+    .bg-secondary {
+      background-color: var(--secondary);
     }
 
-    .third-color {
-      background-color: #90c8ac;
+    .bg-third-color {
+      background-color: var(--third-color);
     }
 
-    .fourth-color {
-      background-color: #73a9ad;
+    .bg-fourth-color {
+      background-color: var(--fourth-color);
     }
 
     .container {
       margin: 5%;
     }
 
-    .border-primary {
-      border: 5px solid #c4dfaa;
+    .border-secondary {
+      border: 5px solid var(--secondary);
       border-radius: 10px;
     }
 
     .border-left {
       border-style: solid;
-      border-color: #90c8ac;
+      border-color: var(--third-color);
       border-width: 0 0 0 5px;
     }
 
@@ -77,6 +85,10 @@
       margin-top: 10px;
     }
 
+    .mt-20 {
+      margin-top: 20px;
+    }
+
     .m-20 {
       margin: 20px;
     }
@@ -93,7 +105,7 @@
       width: 120px;
       height: 120px;
       object-fit: cover;
-      border: 5px solid #c4dfaa;
+      border: 5px solid var(--primary);
       border-radius: 50%;
     }
 
@@ -122,6 +134,7 @@
       position: fixed;
       bottom: 0;
       width: 100%;
+      border-radius: 20px 20px 0 0;
     }
 
     .width100 {
@@ -140,17 +153,46 @@
       display: none;
     }
 
+    .md-hide {
+      display: none;
+    }
+
+    .shadow {
+      box-shadow: black;
+    }
+
     a {
       text-decoration: none;
       font-weight: bolder;
     }
 
-    hr{
+    .hr-big {
       width: 80%;
-      border-style: dotted ;
-      border-color: #90c8ac;
-      border-width: 10px 0 0 0;
-      padding: 10px;
+      border-style: dotted;
+      border-color: var(--third-color);
+      border-width: 15px 0 0 0;
+      margin-top: 10px;
+    }
+
+    .hr-small {
+      width: 80%;
+      border-style: dotted;
+      border-color: var(--third-color);
+      border-width: 5px 0 0 0;
+      margin-top: 10px;
+    }
+
+    .project-img {
+      max-width: 100%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .small-icon {
+      width: 30px;
+      height: auto;
     }
 
     @media screen and (min-width: 720px) {
@@ -181,6 +223,15 @@
       .md-ml-10 {
         margin-left: 10px;
       }
+
+      .md-hide {
+        display: flex;
+      }
+
+      .sm-col-reverse {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     @media screen and (min-width: 540px) {
@@ -193,14 +244,25 @@
       --h: 1.2em;
       line-height: var(--h);
       color: #0000;
-      text-shadow: 0 calc(-1 * var(--_t, 0em)) #194221,
-        0 calc(var(--h) - var(--_t, 0em)) #73a9ad;
+      text-shadow: 0 calc(-1 * var(--_t, 0em)) black,
+        0 calc(var(--h) - var(--_t, 0em)) var(--fourth-color);
       overflow: hidden;
       transition: 0.3s;
     }
 
     .hover-text:hover {
       --_t: var(--h);
+    }
+
+    .reveal {
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 1s ease;
+    }
+
+    .reveal.active {
+      transform: translateY(0px);
+      opacity: 1;
     }
 
     .move-up {
@@ -218,58 +280,70 @@
         opacity: 1;
       }
     }
+
+    .hover-bigger:hover {
+      transform: scale(1.1);
+    }
   </style>
-  <body class="primary ">
+  <body class="bg-primary move-up">
     <div class="col md-row container">
       <header class="col width20">
         <!-- 頭像start -->
-        <div class="col align-items-center border-primary">
-          <h1>于萱</h1>
-          <img class="profile-photo m-20" src="./resumeImg.jpg" alt="頭像" />
-          <div class="row wrap m-10 justify-content-around">
+        <div
+          class="row md-col justify-content-around align-items-center border-secondary bg-secondary"
+        >
+          <!-- <img class="profile-photo m-20" src="./img/resumeImg.jpg" alt="頭像" /> -->
+          <div class="col justify-content-around align-items-center">
+            <h1>tuco</h1>
+            <h3>前端工程師(ﾟ∀ﾟ)邁進</h3>
+          </div>
+          <div class="col md-row wrap m-10 justify-content-around">
             <a
               class="hover-text m-10"
               target="blank"
               href="https://github.com/mawarutuco"
             >
-              <i class="fa fa-github" aria-hidden="true"></i> GitHub
+              <i class="fa fa-github" aria-hidden="true">GitHub</i>
             </a>
 
             <a
               class="hover-text m-10"
               target="blank"
               href="https://codepen.io/mawarutuco"
-              ><i class="fa fa-codepen" aria-hidden="true"></i> codepen
+              ><i class="fa fa-codepen" aria-hidden="true">codepen</i>
             </a>
           </div>
         </div>
         <!-- 頭像end -->
         <!-- 標籤start -->
-        <div class="col">
+        <div class="col mt-20">
           <div class="row justify-content-center wrap">
-            <h4 class="border-primary m-10">樂於學習</h4>
-            <h4 class="border-primary m-10">責任心重</h4>
-            <h4 class="border-primary m-10">勇於嘗試</h4>
-            <h4 class="border-primary m-10 sm-hide">喜歡解謎</h4>
+            <h4 class="border-secondary m-10 hover-bigger">樂於學習</h4>
+            <h4 class="border-secondary m-10 hover-bigger">責任心重</h4>
+            <h4 class="border-secondary m-10 hover-bigger">勇於嘗試</h4>
+            <h4 class="border-secondary m-10 hover-bigger sm-hide">喜歡解謎</h4>
           </div>
         </div>
         <!-- 標籤end -->
         <!-- 導覽start -->
         <div
-          class="border-primary p-10 wrap md-col align-items-center justify-content-center md-justify-content-start sticky secondary"
+          class="mt-20 border-secondary p-10 wrap md-col align-items-center justify-content-center md-justify-content-start fixed sticky bg-secondary"
         >
-          <a class="hover-text m-10" href="#expertise">專長</a>
-          <a class="hover-text m-10" href="#project">專案成就</a>
-          <a class="hover-text m-10" href="#work_experience">工作經歷</a>
-          <a class="hover-text m-10" href="#education">學歷</a>
-          <a class="hover-text m-10" href="#autobiography">自傳</a>
+          <a class="hover-text m-10" href="#expertise"
+            >專長 <img class="small-icon" src="./img/sushi_ebi.png"/>
+          </a>
+          <a class="hover-text m-10" href="#project">作品 <img class="small-icon" src="./img/sushi_ebi.png"/></a>
+          <a class="hover-text m-10" href="#work_experience">經歷 <img class="small-icon" src="./img/sushi_ebi.png"/></a>
+          <a class="hover-text m-10" href="#education">學歷 <img class="small-icon" src="./img/sushi_ebi.png"/></a>
+          <a class="hover-text m-10" href="#autobiography">自傳 <img class="small-icon" src="./img/sushi_ebi.png"/></a>
         </div>
         <!-- 導覽end -->
       </header>
 
-      <article class="border-primary md-ml-10 p-20 col width80 sm-mt-10">
-        <div id="expertise">
-          <h1>專長</h1>
+      <article class="md-ml-10 col width80 sm-mt-10">
+        <!-- 專長 -->
+        <div class="border-secondary p-20">
+          <h1 id="expertise">專長</h1>
           <h3>前端技能樹</h3>
           <ul>
             <li>
@@ -301,23 +375,49 @@
           </ul>
         </div>
 
-        <div id="project">
-          <h1>專案成就</h1>
+        <!-- 作品 -->
+        <div class="reveal border-secondary p-20 mt-20 bg-secondary">
+          <h1 id="project">作品</h1>
+          <a
+            class="col reveal mt-20 justify-content-center align-items-center"
+            target="blank"
+            href="https://todomonster.github.io/demo/"
+            >待辦獸
+            <img class="project-img" src="./img/tdm.png" alt="" />
+          </a>
+          <a
+            class="col reveal mt-20 justify-content-center align-items-center"
+            target="blank"
+            href="https://github.com/mawarutuco/nested-todo-list"
+            >巢狀Todo-List
+            <img class="project-img" src="./img/todo.png" alt="" />
+          </a>
+          <a
+            class="col reveal mt-20 justify-content-center align-items-center"
+            target="blank"
+            href="https://codepen.io/mawarutuco/pen/RwQqXVK"
+            >日語五十音測驗
+            <img class="project-img" src="./img/jp-test.png" alt="" />
+          </a>
+          <a
+            class="col reveal mt-20 justify-content-center align-items-center"
+            target="blank"
+            href="https://codepen.io/mawarutuco/pen/RwQwegK"
+            >Dino Run
+            <img class="project-img" src="./img/dino-game.png" alt="" />
+          </a>
         </div>
 
-        <hr>
-        
-        <div id="work_experience">
-          <h1>工作經歷</h1>
-          <ul>
-            <h3>前端工程師養成班</h3>
-            <h3>資展國際股份有限公司/電腦軟體服務業</h3>
-            <p>軟體設計工程師 台中市南屯區</p>
-            <p>2022/3~2022/7</p>
-            <p>5個月</p>
-            <p>參與資展協會「前端工程師養成班」擔任學員職位</p>
+        <!-- 經歷 -->
+        <div class="reveal border-secondary p-20 mt-20">
+          <h1 id="work_experience">經歷</h1>
 
-            <p>※ 小專題 - 獨自開發</p>
+          <div class="reveal">
+            <h3>前端工程師養成班－學員</h3>
+            <h3>資展國際股份有限公司/電腦軟體服務業</h3>
+            <p>2022/3~2022/7</p>
+
+            <h4>※ 小專題 - 獨自開發</h4>
             <p>專案名稱：日文學習網站</p>
             <p>專案內容：希望能夠提供日文初學者一個學習日文的網站</p>
             <p>使用技術：JavaScript、jQuery、SCSS、Bootstrap、HTML</p>
@@ -325,10 +425,7 @@
               網站架構：日文五十音測驗（專案成就區有附上連結）、輪播結合圖文介紹助詞、日文句子測驗等
             </p>
 
-            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-            - - - - - - - - - - - -
-
-            <p>※ 大專題 - 6人團隊開發</p>
+            <h4>※ 大專題 - 6人團隊開發</h4>
             <p>專案名稱：ToDo Monster 待辦獸</p>
             <p>
               專案內容：結合「To-do
@@ -337,118 +434,160 @@
             <p>（專案成就區有附上連結）</p>
 
             <p>使用技術：</p>
-            <li>
-              SPA 響應式網頁，採用 React框架 + Express 前後端分離的開發模式
-            </li>
-            <li>React Router 路由設定</li>
-            <li>React-i18next 做多語系切換</li>
-            <li>React-Bootstrap切版美化</li>
-            <li>pixijs 讓待辦獸做換裝&切換動作</li>
-            <li>axios 與後端 Web API 介接</li>
+            <ul>
+              <li>
+                SPA 響應式網頁，採用 React框架 + Express 前後端分離的開發模式
+              </li>
+              <li>React Router 路由設定</li>
+              <li>React-i18next 做多語系切換</li>
+              <li>React-Bootstrap切版美化</li>
+              <li>pixijs 讓待辦獸做換裝&切換動作</li>
+              <li>axios 與後端 Web API 介接</li>
+            </ul>
 
-            <p>網站架構：</p>
-            <li>
-              專案：快速建立專案，配合巢狀ToDoList，幫助細拆分待處理事項。也可公開專案，於瀏覽頁面給其他使用者參考
-            </li>
-            <li>
-              瀏覽：參考其他使用者的文章，也可收藏文章，可拍手鼓勵作者，互相勉勵成長
-            </li>
-            <li>任務：完成不同的任務獲得金幣獎勵</li>
-            <li>商城：為自己的待辦獸購買可愛配件（耳朵、尾巴、眼睛等）</li>
-            <li>背包：為自己的待辦獸配置配件，重新命名等</li>
-            <li>設定：可切換語言</li>
+            <p>網站架構：專案、瀏覽、任務、商城、背包、設定</p>
 
             <p>團隊中工作分配：</p>
-            <li>操作React Router</li>
-            <li>架設多國語系i18n</li>
-            <li>
-              React功能整合
-              <ul>
-                <li>專案、巢狀ToDoList</li>
-                <li>商城（商店、購物車）</li>
-                <li>瀏覽文章</li>
-                <li>登入註冊</li>
-                <li>任務</li>
-              </ul>
-            </li>
+            <ul>
+              <li>操作React Router</li>
+              <li>架設多國語系i18n</li>
+              <li>
+                React功能整合
+                <ul>
+                  <li>專案、巢狀ToDoList</li>
+                  <li>商城（商店、購物車）</li>
+                  <li>瀏覽文章</li>
+                  <li>登入註冊</li>
+                  <li>任務</li>
+                </ul>
+              </li>
+            </ul>
 
+            <hr class="hr-small" />
+          </div>
+
+          <div class="reveal">
             <h3>資訊人員</h3>
-            <h3>
-              漢坤國際醫藥股份有限公司 藥品／化妝品及清潔用品批發業 100~500人
-            </h3>
-            <p>系統維護／操作人員 台中市中區</p>
+            <h3>漢坤國際醫藥股份有限公司/藥品化妝品及清潔用品批發業</h3>
             <p>2021/9~2022/2</p>
-            <p>6個月</p>
-            <li>補齊內部ERP十多家公司別從2020開始缺少之資料</li>
-            <li>回報先前人員作業弊端</li>
-            <li>教主管人員系統之操作</li>
-            <li>排除ERP系統異常錯誤</li>
-            <li>協助系統整合</li>
-            <li>製作簡報</li>
+            <ul>
+              <li>補齊內部ERP十多家公司別從2020開始缺少之資料</li>
+              <li>回報先前人員作業弊端</li>
+              <li>教主管人員系統之操作</li>
+              <li>排除ERP系統異常錯誤</li>
+              <li>協助系統整合</li>
+              <li>製作簡報</li>
+            </ul>
 
+            <hr class="hr-small" />
+          </div>
+          <div class="reveal">
             <h3>服務顧問師</h3>
-            <h3>鼎新電腦股份有限公司 電腦軟體服務業 500人以上</h3>
+            <h3>鼎新電腦股份有限公司/電腦軟體服務業</h3>
             <p>電話客服類人員 台中市大里區</p>
             <p>2020/7~2021/6</p>
-            <p>1年</p>
-            <li>日均接聽18.4、客戶滿意度9.2、滿意度占比96.4%，考核評等B</li>
-            <li>線上提供電話或文字服務</li>
-            <li>即時解決系統問題</li>
-            <li>協助排除系統錯誤</li>
-            <li>教導客戶系統操作</li>
-            <li>內部提出改善建議</li>
+            <ul>
+              <li>日均接聽18.4、客戶滿意度9.2、滿意度占比96.4%，考核評等B</li>
+              <li>線上提供電話或文字服務</li>
+              <li>即時解決系統問題</li>
+              <li>協助排除系統錯誤</li>
+              <li>教導客戶系統操作</li>
+              <li>內部提出改善建議</li>
+            </ul>
 
+            <hr class="hr-small" />
+          </div>
+          <div class="reveal">
             <h2>國遠距教學學伴</h2>
             <h3>國立勤益科技大學 大專校院教育事業 30~100人</h3>
-            <p>2018/6~2019/6（1年1個月）</p>
-            <li>傳授課程</li>
-            <li>輔導學生</li>
-            <li>批改作業</li>
-          </ul>
-        </div>
-
-        <hr>
-        
-        <div id="education">
-          <h1>學歷</h1>
-          <div class="row">
-            <div class=""></div>
+            <p>2018/6~2019/6</p>
             <ul>
-              <li>國立勤益科技大學 （資訊管理學系） 大學畢業 2017/9~2021/6</li>
-              <li>新民高中 （資料處理科） 高職畢業 2014/9~2017/6</li>
+              <li>傳授課程</li>
+              <li>輔導學生</li>
+              <li>批改作業</li>
             </ul>
           </div>
         </div>
 
-        <hr>
-        
-        <div id="autobiography">
-          <h1>自傳</h1>
-          <ul>
-            <h3>個人特質</h3>
-            <li>解決問題：</li>
-            <p>從小喜歡玩線上各式解謎遊戲，長大後在家中協助解決問題，再經過實習直接對應客戶的各種疑難雜症後，更善於將繁雜的問題抽絲剝解，處理妥當。</p>
-            參加資展會 -
-            前端工程師養成班中，不論製作大小專題或個人練習時，不斷面臨一個又一個問題，能夠有條理得將問題一一解決。</p>
-            <li>勇於嘗試：</li>
-            <p> 喜歡日本文化而從零自學日文到N2（日文等級
-            低N5→N1高），大學曾參與學校活動帶來自大阪、九州的日本學生。</p>
-           <p> 積極爭取到在鼎新電腦實習機會，除了每天操作ERP協助排除各個客戶的問題，也參與主管分配的團隊任務，大大提升我ERP技術、抗壓、溝通及團隊合作。</p>
-           <li>責任心重、要求嚴格：</li>
-           <p> 高中時期要求自己成績能更好，當課程中有不懂的地方，休息時間會請教老師，並不放棄的繼續學習。</p>
-           <p> 大學實習期間白天上班操作系統，若遇到不懂的地方虛心請教前輩，晚上回家繼續練習並做筆記。</p>
-           <p> 在前端工程師養成班中，白天聽課，晚上也不忘複習練習，不斷嘗試新事物，做出更多作品。</p>
-          </p>
-        </ul>
+        <!-- 學歷 -->
+        <div class="reveal border-secondary p-20 mt-20 bg-secondary">
+          <h1 id="education">學歷</h1>
+          <div class="row">
+            <div class=""></div>
+            <ul>
+              <li>國立勤益科技大學 / 資訊管理學系 （2017/9~2021/6）</li>
+              <li>新民高中 / 資料處理科 （2014/9~2017/6）</li>
+            </ul>
+          </div>
         </div>
+
+        <!-- 自傳 -->
+        <div class="reveal border-secondary p-20 mt-20">
+          <h1 id="autobiography">自傳</h1>
+          <h3>個人特質</h3>
+          <ul>
+            <li>解決問題：</li>
+            <p>
+              從小喜歡玩線上各式解謎遊戲，長大後在家中協助解決問題，再經過實習直接對應客戶的各種疑難雜症後，更善於將繁雜的問題抽絲剝解，處理妥當。
+            </p>
+            <p>
+              參加資展會 -
+              前端工程師養成班中，不論製作大小專題或個人練習時，不斷面臨一個又一個問題，能夠有條理得將問題一一解決。
+            </p>
+            <li>勇於嘗試：</li>
+            <p>
+              喜歡日本文化而從零自學日文到N2（日文等級低N5→N1高），大學曾參與學校活動帶來自大阪、九州的日本學生。
+            </p>
+            <p>
+              積極爭取到在鼎新電腦實習機會，除了每天操作ERP協助排除各個客戶的問題，也參與主管分配的團隊任務，大大提升我ERP技術、抗壓、溝通及團隊合作。
+            </p>
+            <li>責任心重、要求嚴格：</li>
+            <p>
+              高中時期要求自己成績能更好，當課程中有不懂的地方，休息時間會請教老師，並不放棄的繼續學習。
+            </p>
+            <p>
+              大學實習期間白天上班操作系統，若遇到不懂的地方虛心請教前輩，晚上回家繼續練習並做筆記。
+            </p>
+            <p>
+              在前端工程師養成班中，白天聽課，晚上也不忘複習練習，不斷嘗試新事物，做出更多作品。
+            </p>
+          </ul>
+        </div>
+
+        <button
+          onclick="scrollToTop()"
+          class="border-secondary bg-secondary m-20"
+        >
+          ▲
+        </button>
       </article>
     </div>
-
-    <footer class="row footer third-color justify-content-around secondary p-10">
+    <footer
+      class="row footer bg-third-color justify-content-around bg-secondary p-10"
+    >
       <i class="fa fa-envelope-o" aria-hidden="true"> xul4841268@gmail.com</i>
       <i class="fa fa-phone" aria-hidden="true"> 0928442263</i>
     </footer>
   </body>
 
-  <script></script>
+  <script>
+    //scroll內容淡出
+    window.addEventListener("scroll", reveal);
+    function reveal() {
+      let reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight * 0.8;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+
+        if (revealTop < windowHeight) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    function scrollToTop() {
+      scrollTo(0, 0);
+    }
+  </script>
 </html>
