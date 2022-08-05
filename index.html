@@ -195,6 +195,10 @@
       height: auto;
     }
 
+    .pointer {
+      cursor: pointer;
+    }
+
     @media screen and (min-width: 720px) {
       .md-row {
         flex-direction: row;
@@ -329,13 +333,11 @@
         <div
           class="mt-20 border-secondary p-10 wrap md-col align-items-center justify-content-center md-justify-content-start fixed sticky bg-secondary"
         >
-          <a class="hover-text m-10" href="#expertise"
-            >專長 <img class="small-icon" src="./img/sushi_ebi.png"/>
-          </a>
-          <a class="hover-text m-10" href="#project">作品 <img class="small-icon" src="./img/sushi_ebi.png"/></a>
-          <a class="hover-text m-10" href="#work_experience">經歷 <img class="small-icon" src="./img/sushi_ebi.png"/></a>
-          <a class="hover-text m-10" href="#education">學歷 <img class="small-icon" src="./img/sushi_ebi.png"/></a>
-          <a class="hover-text m-10" href="#autobiography">自傳 <img class="small-icon" src="./img/sushi_ebi.png"/></a>
+          <a class="hover-text m-10" href="#expertise">專長 </a>
+          <a class="hover-text m-10" href="#project">作品 </a>
+          <a class="hover-text m-10" href="#work_experience">經歷 </a>
+          <a class="hover-text m-10" href="#education">學歷 </a>
+          <a class="hover-text m-10" href="#autobiography">自傳 </a>
         </div>
         <!-- 導覽end -->
       </header>
@@ -562,11 +564,15 @@
         </button>
       </article>
     </div>
+
     <footer
       class="row footer bg-third-color justify-content-around bg-secondary p-10"
     >
-      <i class="fa fa-envelope-o" aria-hidden="true"> xul4841268@gmail.com</i>
-      <i class="fa fa-phone" aria-hidden="true"> 0928442263</i>
+      <li class="fa fa-envelope-o pointer" onclick="copy(this)">
+        xul4841268@gmail.com
+      </li>
+      <div id="alert_copied">點信箱/電話可以複製</div>
+      <li class="fa fa-phone pointer" onclick="copy(this)">0928442263</li>
     </footer>
   </body>
 
@@ -588,6 +594,23 @@
 
     function scrollToTop() {
       scrollTo(0, 0);
+    }
+
+
+    function copy(el) {
+      let copied = document.getElementById("alert_copied");
+      let content = el.innerText;
+      navigator.clipboard
+        .writeText(content)
+        .then(() => {
+          copied.innerText = "~~複製成功~~";
+          setTimeout(() => {
+            copied.innerText = "點信箱/電話可以複製";
+          }, 1500);
+        })
+        .catch((err) => {
+          console.log("wrong", err);
+        });
     }
   </script>
 </html>
