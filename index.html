@@ -130,6 +130,10 @@
         align-items: center;
       }
 
+      .align-items-between {
+        align-items: space-between;
+      }
+
       .footer {
         position: fixed;
         bottom: 0;
@@ -567,12 +571,12 @@
     </div>
 
     <footer
-      class="row footer bg-third-color justify-content-around bg-secondary p-10"
+      class="col md-row footer bg-third-color justify-content-around align-items-center bg-secondary p-10"
     >
+      <div id="alert_copied">點信箱/電話可以複製</div>
       <li class="fa fa-envelope-o pointer" onclick="copy(this)">
         xul4841268@gmail.com
       </li>
-      <div id="alert_copied">點信箱/電話可以複製</div>
       <li class="fa fa-phone pointer" onclick="copy(this)">0928442263</li>
     </footer>
   </body>
@@ -603,7 +607,7 @@
       navigator.clipboard
         .writeText(content)
         .then(() => {
-          copied.innerText = "~~複製成功~~";
+          copied.innerText = "~~~複製成功~~~";
           setTimeout(() => {
             copied.innerText = "點信箱/電話可以複製";
           }, 1500);
