@@ -11,284 +11,285 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>廖于萱</title>
-  </head>
-  <style>
-    :root {
-      --primary: #f5f0bb;
-      --secondary: #c4dfaa;
-      --third-color: #90c8ac;
-      --fourth-color: #73a9ad;
-    }
 
-    body {
-      margin: 0px;
-    }
+    <style>
+      :root {
+        --primary: #f5f0bb;
+        --secondary: #c4dfaa;
+        --third-color: #90c8ac;
+        --fourth-color: #73a9ad;
+      }
 
-    .bg-primary {
-      background-color: var(--primary);
-    }
+      body {
+        margin: 0px;
+      }
 
-    .bg-secondary {
-      background-color: var(--secondary);
-    }
+      .bg-primary {
+        background-color: var(--primary);
+      }
 
-    .bg-third-color {
-      background-color: var(--third-color);
-    }
+      .bg-secondary {
+        background-color: var(--secondary);
+      }
 
-    .bg-fourth-color {
-      background-color: var(--fourth-color);
-    }
+      .bg-third-color {
+        background-color: var(--third-color);
+      }
 
-    .container {
-      margin: 5%;
-    }
+      .bg-fourth-color {
+        background-color: var(--fourth-color);
+      }
 
-    .border-secondary {
-      border: 5px solid var(--secondary);
-      border-radius: 10px;
-    }
+      .container {
+        margin: 5%;
+      }
 
-    .border-left {
-      border-style: solid;
-      border-color: var(--third-color);
-      border-width: 0 0 0 5px;
-    }
+      .border-secondary {
+        border: 5px solid var(--secondary);
+        border-radius: 10px;
+      }
 
-    .row {
-      display: flex;
-    }
+      .border-left {
+        border-style: solid;
+        border-color: var(--third-color);
+        border-width: 0 0 0 5px;
+      }
 
-    .md-row {
-      display: flex;
-      flex-direction: column;
-    }
+      .row {
+        display: flex;
+      }
 
-    .col {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .wrap {
-      flex-wrap: wrap;
-    }
-
-    .md-col {
-      display: flex;
-    }
-
-    .m-10 {
-      margin: 10px;
-    }
-
-    .sm-mt-10 {
-      margin-top: 10px;
-    }
-
-    .mt-20 {
-      margin-top: 20px;
-    }
-
-    .m-20 {
-      margin: 20px;
-    }
-
-    .p-10 {
-      padding: 10px;
-    }
-
-    .p-20 {
-      padding: 20px;
-    }
-
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border: 5px solid var(--primary);
-      border-radius: 50%;
-    }
-
-    .sticky {
-      position: sticky;
-      top: 10px;
-    }
-
-    .relative {
-      position: relative;
-    }
-
-    .justify-content-center {
-      justify-content: center;
-    }
-
-    .justify-content-around {
-      justify-content: space-around;
-    }
-
-    .align-items-center {
-      align-items: center;
-    }
-
-    .footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      border-radius: 20px 20px 0 0;
-    }
-
-    .width100 {
-      width: 100%;
-    }
-
-    .width85 {
-      width: 85%;
-    }
-
-    .width15 {
-      width: 15%;
-    }
-
-    .sm-hide {
-      display: none;
-    }
-
-    .md-hide {
-      display: none;
-    }
-
-    .shadow {
-      box-shadow: black;
-    }
-
-    a {
-      text-decoration: none;
-      font-weight: bolder;
-    }
-
-    .hr-big {
-      width: 80%;
-      border-style: dotted;
-      border-color: var(--third-color);
-      border-width: 15px 0 0 0;
-      margin-top: 10px;
-    }
-
-    .hr-small {
-      width: 80%;
-      border-style: dotted;
-      border-color: var(--third-color);
-      border-width: 5px 0 0 0;
-      margin-top: 10px;
-    }
-
-    .project-img {
-      max-width: 100%;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .small-icon {
-      width: 30px;
-      height: auto;
-    }
-
-    .pointer {
-      cursor: pointer;
-    }
-
-    @media screen and (min-width: 720px) {
       .md-row {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .wrap {
+        flex-wrap: wrap;
       }
 
       .md-col {
-        flex-direction: column;
+        display: flex;
       }
 
-      .md-justify-content-start {
-        justify-content: flex-start;
-      }
-
-      .width80 {
-        width: 80%;
-      }
-
-      .width20 {
-        width: 20%;
+      .m-10 {
+        margin: 10px;
       }
 
       .sm-mt-10 {
-        margin-top: 0px;
+        margin-top: 10px;
       }
 
-      .md-ml-10 {
-        margin-left: 10px;
+      .mt-20 {
+        margin-top: 20px;
+      }
+
+      .m-20 {
+        margin: 20px;
+      }
+
+      .p-10 {
+        padding: 10px;
+      }
+
+      .p-20 {
+        padding: 20px;
+      }
+
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border: 5px solid var(--primary);
+        border-radius: 50%;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 10px;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .justify-content-center {
+        justify-content: center;
+      }
+
+      .justify-content-around {
+        justify-content: space-around;
+      }
+
+      .align-items-center {
+        align-items: center;
+      }
+
+      .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .width100 {
+        width: 100%;
+      }
+
+      .width85 {
+        width: 85%;
+      }
+
+      .width15 {
+        width: 15%;
+      }
+
+      .sm-hide {
+        display: none;
       }
 
       .md-hide {
-        display: flex;
+        display: none;
       }
 
-      .sm-col-reverse {
-        display: flex;
-        flex-direction: column;
+      .shadow {
+        box-shadow: black;
       }
-    }
 
-    @media screen and (min-width: 540px) {
-      .sm-hide {
-        display: block;
+      a {
+        text-decoration: none;
+        font-weight: bolder;
       }
-    }
 
-    .hover-text {
-      --h: 1.2em;
-      line-height: var(--h);
-      color: #0000;
-      text-shadow: 0 calc(-1 * var(--_t, 0em)) black,
-        0 calc(var(--h) - var(--_t, 0em)) var(--fourth-color);
-      overflow: hidden;
-      transition: 0.3s;
-    }
+      .hr-big {
+        width: 80%;
+        border-style: dotted;
+        border-color: var(--third-color);
+        border-width: 15px 0 0 0;
+        margin-top: 10px;
+      }
 
-    .hover-text:hover {
-      --_t: var(--h);
-    }
+      .hr-small {
+        width: 80%;
+        border-style: dotted;
+        border-color: var(--third-color);
+        border-width: 5px 0 0 0;
+        margin-top: 10px;
+      }
 
-    .reveal {
-      transform: translateY(50px);
-      opacity: 0;
-      transition: all 1s ease;
-    }
+      .project-img {
+        max-width: 100%;
+      }
 
-    .reveal.active {
-      transform: translateY(0px);
-      opacity: 1;
-    }
+      html {
+        scroll-behavior: smooth;
+      }
 
-    .move-up {
-      animation: moveUp 1s;
-    }
+      .small-icon {
+        width: 30px;
+        height: auto;
+      }
 
-    @keyframes moveUp {
-      from {
+      .pointer {
+        cursor: pointer;
+      }
+
+      @media screen and (min-width: 720px) {
+        .md-row {
+          flex-direction: row;
+        }
+
+        .md-col {
+          flex-direction: column;
+        }
+
+        .md-justify-content-start {
+          justify-content: flex-start;
+        }
+
+        .width80 {
+          width: 80%;
+        }
+
+        .width20 {
+          width: 20%;
+        }
+
+        .sm-mt-10 {
+          margin-top: 0px;
+        }
+
+        .md-ml-10 {
+          margin-left: 10px;
+        }
+
+        .md-hide {
+          display: flex;
+        }
+
+        .sm-col-reverse {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      @media screen and (min-width: 540px) {
+        .sm-hide {
+          display: block;
+        }
+      }
+
+      .hover-text {
+        --h: 1.2em;
+        line-height: var(--h);
+        color: #0000;
+        text-shadow: 0 calc(-1 * var(--_t, 0em)) black,
+          0 calc(var(--h) - var(--_t, 0em)) var(--fourth-color);
+        overflow: hidden;
+        transition: 0.3s;
+      }
+
+      .hover-text:hover {
+        --_t: var(--h);
+      }
+
+      .reveal {
         transform: translateY(50px);
         opacity: 0;
+        transition: all 1s ease;
       }
 
-      to {
+      .reveal.active {
         transform: translateY(0px);
         opacity: 1;
       }
-    }
 
-    .hover-bigger:hover {
-      transform: scale(1.1);
-    }
-  </style>
+      .move-up {
+        animation: moveUp 1s;
+      }
+
+      @keyframes moveUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+
+        to {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+
+      .hover-bigger:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
   <body class="bg-primary move-up">
     <div class="col md-row container">
       <header class="col width20">
@@ -595,7 +596,6 @@
     function scrollToTop() {
       scrollTo(0, 0);
     }
-
 
     function copy(el) {
       let copied = document.getElementById("alert_copied");
